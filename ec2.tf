@@ -55,7 +55,7 @@ resource "aws_iam_policy" "s3_read_write_policy" {
 #为 IAM 角色附加 指定s3桶读写策略
 resource "aws_iam_role_policy_attachment" "s3_policy" {
   role       = aws_iam_role.ec2_role.name
-  policy_arn = "aws_iam_policy.s3_read_write_policy.arn"
+  policy_arn = aws_iam_policy.s3_read_write_policy.arn
 }
 
 # 为 IAM 角色附加 AmazonSSMManagedInstanceCore 策略
