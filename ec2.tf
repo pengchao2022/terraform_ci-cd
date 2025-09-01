@@ -62,7 +62,7 @@ resource "aws_instance" "web_server" {
               apt-get install -y nginx
               systemctl start nginx
               systemctl enable nginx
-              echo "<html><body><h1>Welcome to My Web Server!</h1><p> Designed by Pengchao in Shanghai</p><p>Instance ID: $(curl -s http://169.254.169.254/latest/meta-data/instance-id)</p><p>Public IP: $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4)</p><p>这个项目完全使用 Github actions CI/CD 完成</p></body></html>" > /var/www/html/index.html
+              echo "<html><body><h1>Welcome to My Web Server!</h1><p> Designed by Pengchao in Shanghai</p><p>Instance ID: $(curl -s http://169.254.169.254/latest/meta-data/instance-id)</p><p>Public IP: $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4)</p><p>This project is using Github actions CI/CD 完成</p></body></html>" > /var/www/html/index.html
               systemctl restart nginx
               EOF
 
