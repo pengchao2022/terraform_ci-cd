@@ -5,6 +5,6 @@ resource "aws_vpc" "main_vpc" {
   enable_dns_hostnames = true
 
   tags = {
-    Name = "allen-vpc"
+    Name = "production-vpc"
   }
 }
